@@ -25,6 +25,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'figaro'
 
+gem 'google-api-client'
+
+gem 'omniauth', '~> 1.2.2'
+
+gem 'omniauth-google-oauth2'
+
+gem 'json'
+
 group :production do
   gem 'pg'
 end
