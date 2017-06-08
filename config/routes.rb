@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   resources :users
-  root 'users#index'
-  get '/practice', to: "users#practice"
+  resources :sessions, only: :index
+
+  root to: 'sessions#new'
+  
+  get '/practice', to: 'users#practice'
+  get "/auth/:provider/callback" => 'sessions#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
