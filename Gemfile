@@ -33,6 +33,8 @@ gem 'omniauth-google-oauth2'
 
 gem 'json'
 
+gem 'puma'
+
 group :production do
   gem 'pg'
 end
@@ -57,6 +59,14 @@ group :development, :test do
   gem 'spring'
   gem 'rb-readline'
   gem 'sqlite3'
+end
+
+group :development do
+  gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm'
 end
 
 
